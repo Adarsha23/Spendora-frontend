@@ -1,0 +1,171 @@
+/* Import Google Font for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset default margin, padding, and enable box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Applying Poppins font */
+}
+
+/* Style for body to center content vertically and horizontally */
+body {
+    background-color: #EADDC3; /* Light background color */
+    display: flex; /* Using flexbox for alignment */
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Main container styling */
+.container {
+    display: flex; /* Using flexbox for layout */
+    width: 850px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    background-color: white; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide content overflow */
+}
+
+/* Left section (Login) */
+.login-section {
+    width: 50%; /* Takes 50% width */
+    background-color: white; /* White background */
+    padding: 40px; /* Padding inside */
+}
+
+/* Logo styling */
+.logo img {
+    width: 50px; /* Fixed width for logo */
+    margin-bottom: 10px; /* Space below logo */
+}
+
+/* Heading style for login */
+h1 {
+    font-size: 24px; /* Font size */
+    font-weight: 600; /* Font weight */
+}
+
+/* Form styling */
+form {
+    margin-top: 20px; /* Space above form */
+}
+
+/* Label styling */
+label {
+    font-size: 12px; /* Small font size */
+    color: gray; /* Gray color */
+    display: block; /* Display as block */
+    margin-top: 15px; /* Space above label */
+}
+
+/* Input field styling */
+input {
+    width: 100%; /* Full width */
+    padding: 8px; /* Inner padding */
+    border: 1px solid black; /* Black border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Space above input field */
+}
+
+/* Styling for Remember Me and Forgot Password section */
+.options {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items center */
+    font-size: 12px; /* Small font size */
+    margin: 15px 0; /* Space around */
+}
+
+/* Checkbox styling */
+.options input {
+    width: auto; /* Auto width */
+    margin-right: 5px; /* Space on the right */
+}
+
+/* Link styling */
+.options a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Black color */
+}
+
+/* Button styling */
+.btn {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding */
+    background-color: white; /* White background */
+    border: 1px solid black; /* Black border */
+    border-radius: 20px; /* Rounded button */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: 600; /* Bold font */
+}
+
+/* Hover effect for button */
+.btn:hover {
+    background-color: #f5f5f5; /* Light gray on hover */
+}
+
+/* Right section (Signup) */
+.signup-section {
+    width: 50%; /* Takes 50% width */
+    background-color: #836953; /* Brown background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 60px 40px; /* Padding inside */
+}
+
+/* Heading in signup section */
+
+.signup-section h2 {
+    font-size: 24px; /* Font size */
+    font-weight: 600; /* Font weight */
+    transform: translate(-50%, -50%);
+}
+.signup-section h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #836953;
+}
+.signup-section h2:nth-child(2){
+    color: white;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate{
+    0%, 100%{
+        clip-path: polygon(0% 64%, 12% 62%, 27% 66%, 36% 70%, 49% 75%, 61% 77%, 72% 73%, 84% 69%, 95% 63%, 100% 61%, 100% 100%, 0% 100%);
+    }
+    50%, 100%{
+        clip-path: polygon(1% 71%, 12% 71%, 27% 71%, 41% 65%, 57% 56%, 74% 50%, 88% 50%, 100% 50%, 100% 100%, 1% 100%);
+    }
+}
+
+/* Tagline styling */
+.tagline {
+    font-size: 12px; /* Small font size */
+    margin-bottom: 400px; /* Space below */
+}
+
+/* Horizontal line */
+hr {
+    margin: 10px 0; /* Space above and below */
+    border: 0.5px solid white; /* White color */
+}
+
+/* Signup title */
+.signup-section h3 {
+    font-size: 18px; /* Font size */
+    font-weight: 600; /* Font weight */
+}
+
+/* Signup text */
+.signup-section p {
+    font-size: 12px; /* Small font size */
+    margin: 30px 30px; /* Space above and below */
+}
+
+/* Signup button */
+.signup-section .btn {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    width: 100px; /* Fixed width */
+}
