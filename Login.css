@@ -136,6 +136,7 @@ input {
     justify-content: center;
 }
 .signup-section h2:nth-child(1){
+    margin-top: ;
     color: transparent;
     -webkit-text-stroke: 2px white;
 }
