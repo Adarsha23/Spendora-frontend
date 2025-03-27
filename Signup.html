@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="Signup.css"> <!-- Link to external CSS -->
+    <script src="Signup.js" defer></script> <!-- Link to JavaScript -->
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section (Intro) -->
+        <div class="intro-section">
+            <h1><span class="brand">SPENDORA</span></h1>
+            <p class="tagline">Brighten your Budget</p>
+            <h2>Budget. Balance. Build. <br>Effortless Tracking Begins Here!</h2>
+            <p class="description">
+                Look out for Spendora when it comes to budgeting, tracking, and saving your money. 
+                Take one step to spend, two steps to save. Invest in the future by tracking and managing 
+                your expenses starting from now. What are you waiting for?
+            </p>
+        </div>
+
+        <!-- Right Section (Signup) -->
+        <div class="signup-section">
+            <h2>Hello there, <br> Welcome!</h2>
+
+            <form>
+                <label for="email">e-mail</label>
+                <input type="email" id="email" placeholder="You@example.com">
+
+                <label for="username">username</label>
+                <input type="text" id="username" placeholder="Enter your name">
+
+                <label for="password">password</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter 6 characters or more">
+                    <span class="toggle-password">
+                        <img src="eye-icon.png" alt="Show Password" id="eye-icon">
+                    </span>
+                </div>
+
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

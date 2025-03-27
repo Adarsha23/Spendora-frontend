@@ -135,8 +135,8 @@ input {
 /* SPENDORA heading styling*/
 
 .signup-section h2 {
-    font-size: 40px; /* Font size */
-    font-weight: 350em; /* Font weight */
+    font-size: 50px; /* Font size */
+    font-weight: 500em; /* Font weight */
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -147,7 +147,8 @@ input {
 
 /* Tagline styling */
 .tagline {
-    font-size: 12px; /* Small font size */
+    margin-top: 10px;
+    font-size: 30px; /* Small font size */
     margin-bottom: 400px; /* Space below */
 }
 
@@ -155,11 +156,12 @@ input {
 hr {
     margin: 10px 0; /* Space above and below */
     border: 0.5px solid white; /* White color */
+    
 }
 
 /* Signup title */
 .signup-section h3 {
-    font-size: 18px; /* Font size */
+    font-size: 30px; /* Font size */
     font-weight: 600; /* Font weight */
 }
 
