@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Login</title>
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Main container that holds both sections -->
+    <div class="container">
+
+        <!-- Left Section: Login Form -->
+        <div class="login-section">
+            
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo1.png" alt="Logo"> <!-- Logo image -->
+            </div>
+
+            <!-- Welcome message -->
+            <h1>Welcome back</h1>
+
+            <!-- Login form with the correct id for JavaScript -->
+            <form id="login-form">
+                <!-- Username label and input field -->
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <!-- Password label and input field -->
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <!-- Remember Me and Forgot Password section -->
+                <div class="options">
+                    <input type="checkbox" id="remember-me">  <!-- Checkbox for Remember Me -->
+                    <p class="remember_me">Remember</p> <!-- Label for checkbox -->
+                    <a href="forgot_password.html" id="forgot-password">Forgot password?</a> <!-- Forgot password link -->
+                </div>
+
+                <!-- Login button -->
+                <button type="submit" class="btn">Log in</button>
+            </form>
+        </div>
+        
+        <!-- Right Section: Signup Invitation -->
+        <div class="signup-section">
+            <h2>SPENDORA</h2>  <!-- Brand name -->
+            <p class="tagline">Brighten your Budget</p>  <!-- Slogan -->
+
+            <hr>  <!-- Separator line -->
+
+            <h3>New Here?</h3>  <!-- Signup invitation title -->
+            <p>Sign up and discover ways to track down your expense</p>  <!-- Signup message -->
+
+            <!-- Signup button with id for JS -->
+            <button type="button" class="btn" id="signup-btn">Sign up</button>
+        </div>
+    </div>
+
+    <!-- Linking external JS file -->
+    <script src="login.js"></script>
+</body>
+</html>

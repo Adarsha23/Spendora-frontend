@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendora - Budgeting Made Easy</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1 class="brand-name">SPENDORA</h1>
+            <p class="tagline">Brighten your Budget</p>
+            <h2 class="headline">Budget. Balance. Build. Effortless Tracking Begins Here!</h2>
+            <p class="description">
+                Look out for Spendora when it comes to budgeting, tracking, and saving your money.
+                Take one step to spend, two steps to save. Invest in the future you by tracking and 
+                managing your expenses starting from now. What are you waiting for?
+            </p>
+            <button class="login-btn">&lt; Log in</button>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2 class="welcome-text">Hello there, Welcome!</h2>
+            <form id="signup-form" class="signup-form">
+                <label for="email">e-mail</label>
+                <input type="email" id="email" name="email" placeholder="You@example.com" required>
+
+                <label for="username">username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your name" required>
+
+                <label for="password">password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter 6 characters or more" required minlength="6">
+                    <span class="toggle-password" id="eye-toggle">👁</span>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign up</button>
+                <div id="error-message" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
