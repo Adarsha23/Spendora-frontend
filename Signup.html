@@ -3,47 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
-    <link rel="stylesheet" href="Signup.css"> <!-- Link to external CSS -->
-    <script src="Signup.js" defer></script> <!-- Link to JavaScript -->
+    <title>Spendora - Budgeting Made Easy</title>
+    <link rel="stylesheet" href="Signup.css">
+    <script defer src="Signup.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Left Section (Intro) -->
-        <div class="intro-section">
-            <h1><span class="brand">SPENDORA</span></h1>
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1 class="brand-name">SPENDORA</h1>
             <p class="tagline">Brighten your Budget</p>
-            <h2>Budget. Balance. Build. <br>Effortless Tracking Begins Here!</h2>
+            <h2 class="headline">Budget. Balance. Build. Effortless Tracking Begins Here!</h2>
             <p class="description">
-                Look out for Spendora when it comes to budgeting, tracking, and saving your money. 
-                Take one step to spend, two steps to save. Invest in the future by tracking and managing 
-                your expenses starting from now. What are you waiting for?
+                Look out for Spendora when it comes to budgeting, tracking, and saving your money.
+                Take one step to spend, two steps to save. Invest in the future you by tracking and 
+                managing your expenses starting from now. What are you waiting for?
             </p>
+            <button class="login-btn">&lt; Log in</button>
         </div>
 
-        <!-- Right Section (Signup) -->
-        <div class="signup-section">
-            <h2>Hello there, <br> Welcome!</h2>
-
-            <form>
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2 class="welcome-text">Hello there, Welcome!</h2>
+            <form class="signup-form">
                 <label for="email">e-mail</label>
-                <input type="email" id="email" placeholder="You@example.com">
+                <input type="email" id="email" placeholder="You@example.com" required>
 
                 <label for="username">username</label>
-                <input type="text" id="username" placeholder="Enter your name">
+                <input type="text" id="username" placeholder="Enter your name" required>
 
                 <label for="password">password</label>
                 <div class="password-container">
-                    <input type="password" id="password" placeholder="Enter 6 characters or more">
-                    <span class="toggle-password">
-                        <img src="eye-icon.png" alt="Show Password" id="eye-icon">
-                    </span>
+                    <input type="password" id="password" placeholder="Enter 6 characters or more" required>
+                    <img id="eye-icon" src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="Toggle Password">
                 </div>
 
-                <button type="submit">Sign up</button>
+                <button type="submit" class="signup-btn">Sign up</button>
             </form>
         </div>
     </div>
 </body>
 </html>
+
 

@@ -1,14 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.getElementById("eye-icon").addEventListener("click", function () {
     const passwordInput = document.getElementById("password");
-    const eyeIcon = document.getElementById("eye-icon");
-
-    eyeIcon.addEventListener("click", function () {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            eyeIcon.src = "eye-off-icon.png"; // Change icon when visible
-        } else {
-            passwordInput.type = "password";
-            eyeIcon.src = "eye-icon.png"; // Change icon when hidden
-        }
-    });
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        this.src = "https://cdn-icons-png.flaticon.com/512/709/709605.png"; // Eye-off icon
+    } else {
+        passwordInput.type = "password";
+        this.src = "https://cdn-icons-png.flaticon.com/512/709/709612.png"; // Eye icon
+    }
 });
+
