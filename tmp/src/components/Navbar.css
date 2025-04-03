@@ -1,0 +1,159 @@
+/* Styling for the navbar container */
+.navbar {
+  width: 250px;
+  background-color: #3F4C5A;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100vh;
+  border-right: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+/* Styling for the logo section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Logo image */
+.logo-img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+/* Navigation items */
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Fix icon size issue */
+.nav-icon {
+  width: 20px !important; /* Ensures the icons don't grow unexpectedly */
+  height: 20px !important;
+  transition: transform 0.3s ease;
+}
+
+/* Navigation items hover effect */
+.nav-items li {
+  list-style: none;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-items li:hover {
+  background-color: #262C32;
+  border-radius: 5px;
+  transform: translateX(5px);
+}
+
+/* Divider */
+.divider {
+  border-top: 1px solid #fff;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+/* Restoring hover effect for 'Get Help' */
+.get-help {
+  margin-top: auto;
+  padding: 10px;
+  border-top: 1px solid white;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.get-help:hover {
+  background-color: #262C32;
+  border-radius: 5px;
+  transform: translateY(-3px);
+}
+
+/* User profile section */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+}
+
+/* User avatar */
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* User profile text */
+.user-profile span {
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for user profile */
+.user-profile img:hover {
+  transform: scale(1.1);
+}
+
+.user-profile span:hover {
+  color: #f1f1f1;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  background-color: #262C32;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
+  display: none; /* Hide by default */
+}
+
+.dropdown-menu.show {
+  display: block; /* Show when needed */
+}
+
+
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.dropdown-item {
+  background: none;
+  color: white;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #3F4C5A;
+}

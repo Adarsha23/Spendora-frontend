@@ -1,0 +1,88 @@
+.logs-container {
+    background-color: #3f4c5a;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    margin: 20px auto 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.logs-header {
+    display: flex;
+    justify-content: space-between; /* This will space the title and subtitle */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logs-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.logs-subtitle {
+    font-size: 0.8rem;
+    color: #bbb;
+    font-weight: normal;
+    margin-left: auto; /* Pushes subtitle to the right */
+}
+
+.logs-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #262c32;
+    border-radius: 8px;
+}
+
+/* Instruction text styling */
+.instruction-text {
+    font-size: 1rem;
+    color: #bbb;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Grouped logs by date */
+.log-group {
+    margin-bottom: 15px;
+}
+
+.log-date {
+    font-size: 1rem;
+    color: #bbb;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.log-item {
+    background-color: #262c32;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.log-item:hover {
+    background-color: #2a313a;
+    transform: scale(1.02);
+}
+
+.log-amount {
+    color: #ddd;
+    font-weight: bold;
+}
+
+.separator {
+    height: 1px;
+    background-color: white;
+    margin-top: 10px;
+}

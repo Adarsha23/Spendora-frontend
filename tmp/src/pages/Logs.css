@@ -1,0 +1,100 @@
+/* Reset margins, padding, and set box-sizing for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure full height for the body and html */
+  width: 100%;  /* Ensure full width */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for all elements */
+}
+
+/* Main container for the logs page */
+.app-container {
+  display: flex;
+  background-color: #262C32; /* Set background color to match the theme */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  overflow: hidden;
+}
+
+/* Main content section */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto; /* Allows scrolling if content overflows vertically */
+  gap: 20px;
+}
+
+/* Layout for the logs content */
+.logs-content {
+  display: flex;
+  justify-content: space-between; /* Distribute space between Logs List and Charts */
+  margin-bottom: 20px;
+}
+
+
+/* Style for the navbar */
+.navbar {
+  width: 250px;
+  height: 100vh;
+  background-color: #3F4C5A;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to separate navbar */
+}
+
+/* Style for logs header */
+.logs-header {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Category circle with hover effect */
+.category-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.category-circle:hover {
+  transform: scale(1.1); /* Enlarge category on hover */
+  background-color: #4A5D67; /* Change background color on hover */
+}
+
+/* Category name below each circle */
+.category-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

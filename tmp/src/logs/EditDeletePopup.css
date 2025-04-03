@@ -1,0 +1,125 @@
+/* Overlay for the popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's on top of everything */
+    transition: background 0.3s ease; /* Smooth fade in/out */
+  }
+  
+  /* Popup container */
+  .popup-content {
+    background-color: #2f3542; /* Slightly darker background */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px; /* Make it a little wider */
+    max-width: 90%; /* Make it responsive */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transform: translateY(10px);
+    opacity: 0;
+    animation: popup-animation 0.4s forwards; /* Slide-in effect */
+  }
+  
+  /* Title style */
+  .popup-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Modernized title */
+  }
+  
+  /* Buttons Container */
+  .popup-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+  }
+  
+  /* Button styles */
+  .popup-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth hover effect */
+    box-sizing: border-box;
+  }
+  
+  .popup-btn:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  /* Edit Button */
+  .edit-btn {
+    background-color: #3f4c5a; /* Modern blue */
+    color: white;
+    border: none;
+  }
+  
+  .edit-btn:hover {
+    background-color: #4a5d67; /* Darker blue for hover */
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b; /* Darker red for hover */
+  }
+  
+  /* Close Button */
+  .close-btn {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+  }
+  
+  .close-btn:hover {
+    background-color: #7f8c8d; /* Darker gray on hover */
+  }
+  
+  /* Input field for amount */
+  .popup-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    background-color: #f4f6f7; /* Light gray for input */
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+  
+  .popup-content input:focus {
+    border-color: #34b7f1; /* Blue border on focus */
+    outline: none;
+  }
+  
+  /* Popup animation for sliding and fading in */
+  @keyframes popup-animation {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  

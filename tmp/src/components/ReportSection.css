@@ -1,0 +1,53 @@
+.report-section {
+  width: calc(100% - 40px); /* Same as header (100% minus margins) */
+  margin: 10px 20px; /* Same margins as header */
+  background-color: #3F4C5A;
+  color: white;
+  padding: 20px;
+  width: calc(100%);
+  margin: 10px auto;
+  border-radius: 10px; /* Soft rounded corners like the header */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Matching shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.report-section:hover {
+  background-color: #4A5968; /* Matching hover effect */
+}
+
+.report-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.report-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid white;
+}
+
+.report-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  font-weight: normal;
+}
+
+.negative {
+  color: #ff4d4d;
+  font-weight: bold;
+}

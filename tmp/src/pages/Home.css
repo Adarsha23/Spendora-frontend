@@ -1,0 +1,35 @@
+/* Ensure no gap around the body and html elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure full height for the body and html */
+  width: 100%;  /* Ensure full width */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.app-container {
+  display: flex;
+  background-color: #262C32;
+  height: 100vh;
+  width: 100%;  /* Ensure the container takes the full width of the screen */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto; /* Allows scrolling if content overflows vertically */
+}
+
+.content-layout {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

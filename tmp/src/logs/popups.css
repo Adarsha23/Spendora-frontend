@@ -1,0 +1,137 @@
+/* Popup Background Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker for a more modern look */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s ease; /* Smooth fade effect */
+  }
+  
+  /* Popup Box */
+  .popup-content {
+    background: #2F3542; /* Darker shade for a sleek look */
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    transform: translateY(10px); /* Initial slide in effect */
+    animation: popup-animation 0.4s ease-in-out forwards; /* Animation for popup */
+  }
+  
+  /* Title */
+  .popup-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Modern uppercase */
+    letter-spacing: 1px; /* Slightly spaced out letters */
+  }
+  
+  /* Description */
+  .popup-description {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: #B0B6BB; /* Light grey description */
+  }
+  
+  /* Buttons Container */
+  .popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px; /* Space between buttons */
+  }
+  
+  /* General Popup Buttons */
+  .popup-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    width: 48%; /* Make buttons slightly smaller for a balanced look */
+  }
+  
+  .popup-button:hover {
+    transform: scale(1.05); /* Smooth hover effect */
+  }
+  
+  /* Cancel (Red) */
+  .popup-button.cancel {
+    background-color: #E74C3C; /* Modern red */
+    color: white;
+  }
+  
+  .popup-button.cancel:hover {
+    background-color: #C0392B; /* Darker red for hover */
+  }
+  
+  /* Confirm (Gray) */
+  .popup-button.confirm {
+    background-color: #4A5D67; /* Modern gray */
+    color: white;
+  }
+  
+  .popup-button.confirm:hover {
+    background-color: #3B4E58; /* Darker gray for hover */
+  }
+  
+  /* Input Field for Editing */
+  .edit-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #E4E9F0; /* Light background for the input */
+    color: #262c32;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease;
+  }
+  
+  .edit-input:focus {
+    border-color: #4A5D67; /* Highlight border on focus */
+    outline: none;
+  }
+  
+  /* Save Button */
+  .save-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A5D67; /* Modern gray for save button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-button:hover {
+    background-color: #3B4E58; /* Darker gray for hover */
+  }
+  
+  /* Popup Animation (Slide-In) */
+  @keyframes popup-animation {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
