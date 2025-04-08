@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Categories.css";
 
+
 // Categories array with image placeholders
 const categories = [
   { name: "Groceries", image: <img src="/images/groceries.png" alt="Groceries" className="category-icon" /> },

@@ -33,3 +33,10 @@ html, body {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+  .content-layout {
+    flex-direction: column; /* Stack summary and chart vertically on small screens */
+    gap: 20px; /* Add space between stacked components */
+  }
+}
+

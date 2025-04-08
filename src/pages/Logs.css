@@ -17,6 +17,7 @@ html, body {
 /* Main container for the logs page */
 .app-container {
   display: flex;
+  flex: 1;
   background-color: #262C32; /* Set background color to match the theme */
   height: 100vh; /* Full viewport height */
   width: 100%; /* Full width */
@@ -35,9 +36,10 @@ html, body {
 
 /* Layout for the logs content */
 .logs-content {
-  display: flex;
-  justify-content: space-between; /* Distribute space between Logs List and Charts */
-  margin-bottom: 20px;
+  display: flex; /* Aligns children in a row */
+  gap: 20px; /* Space between LogsList+Categories and Charts */
+  padding: 20px;
+  flex-wrap: wrap; /* Allow wrapping if necessary */
 }
 
 
@@ -62,21 +64,11 @@ html, body {
 }
 
 
-
-
-
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
 /* Category circle with hover effect */
 .category-circle {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -98,3 +90,10 @@ html, body {
   font-size: 14px;
   color: #333;
 }
+@media screen and (max-width: 768px) {
+  .content-layout {
+    flex-direction: column; /* Stack summary and chart vertically on small screens */
+    gap: 20px; /* Add space between stacked components */
+  }
+}
+

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar"; // Import Navbar component
 import LogsHeader from "../logs/LogsHeader"; // Import LogsHeader for title
 import LogsList from "../logs/LogsList"; // Import LogsList for displaying expense logs
-import Charts from "../logs/Charts"; // Import Charts component for displaying charts
 import Categories from "../logs/Categories"; // Import Categories for adding expenses
+import Charts from "../logs/Charts"; // Import Charts component for displaying charts
 import EditPopup from "../logs/EditPopup";  // Import Edit Popup
 import DeletePopup from "../logs/DeletePopup"; // Import Delete Popup
 import "./Logs.css"; // Import CSS styles for logs
@@ -66,19 +66,24 @@ const Logs = () => {
   };
 
   return (
-    <div className="app-container">
-      <Navbar />
-      <div className="main-content">
-        <LogsHeader />
-        <div className="logs-content">
-          {/* Pass expenses state and setExpenses function to LogsList */}
-          <LogsList expenses={expenses} setExpenses={setExpenses} />
-          <Charts />
-        </div>
-
-        {/* Pass addExpense function to Categories */}
+<div className="app-container">
+  <Navbar />
+  <div className="main-content">
+    <LogsHeader />
+    <div className="logs-content">
+      {/* LogsList and Categories stacked vertically */}
+      <div className="logs-list-container">
+        <LogsList expenses={expenses} setExpenses={setExpenses} />
         <Categories addExpense={addExpense} />
       </div>
+
+      {/* Charts section beside LogsList + Categories */}
+      <div className="charts-container">
+        <Charts />
+      </div>
+    </div>
+  </div>
+
 
       {/* Render Edit Popup if it's open */}
       {isEditPopupOpen && (

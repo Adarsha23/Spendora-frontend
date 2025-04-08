@@ -1,184 +1,232 @@
+/* Container for categories */
 .categories-container {
-    background-color: #3f4c5a; /* Matching the overall theme */
-    color: white;
-    border-radius: 10px;
-    padding: 5px;  /* Reduced padding */
-    margin-top: -720px; /* Moves the container upwards */
-    width: 100%;
-    max-width: 500px;
-    margin-left: 14px; /* Aligns it to the left */
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  background-color: #3f4c5a;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  max-width: 500px;
+  margin: 30px 14px 0 -2px; 
+  display: flex;
+  flex-direction: column;
 }
-  
-  .categories-title {
-    font-size: 20px;  /* Reduced font size for a tighter fit */
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: white;
-  }
-  
-  .categories-scroll-area {
-    overflow-y: auto;
-    flex: 1;
-    margin-bottom: 15px;
-  }
-  
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px; /* Reduced gap between cards */
-  }
-  
-  .category-card {
-    background-color: #262c32; /* Same background color as LogsList */
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .category-button {
-    background-color: #3f4c5a;
-    border: none;
-    color: white;
-    font-size: 14px;  /* Reduced font size */
-    font-weight: bold;
-    padding: 10px;
-    width: 100%;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .category-button:hover {
-    transform: scale(1.05);
-    background-color: #4a5d67;
-  }
-  
-  .category-image {
-    width: 13px; /* Set a fixed size for the images */
-    height: 13px;
-    margin-bottom: 8px; /* Reduced margin */
-    object-fit: contain; /* Ensures images scale correctly while maintaining aspect ratio */
-  }
-  
-  .category-name {
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 12px;  /* Reduced font size */
-  }
-  
-/* Category Drawer (Popup) Styles */
+
+/* Title styling */
+.categories-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Scrollable area for the categories */
+.categories-scroll-area {
+  overflow-y: auto;
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+/* Grid layout for categories */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box; /* To include padding in the grid width calculation */
+}
+
+/* Each card inside the grid */
+.category-card {
+  background-color: #262c32;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Category button inside card */
+.category-button {
+  background-color: #3f4c5a;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.category-button:hover {
+  transform: scale(1.05);
+  background-color: #4a5d67;
+}
+
+/* Image inside category */
+.category-image,
+.category-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+/* Text below the image */
+.category-name {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+/* Drawer popup for category input */
 .category-drawer {
-    background-color: #262c32;
-    padding: 20px;
-    border-radius: 10px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 400px;
-    z-index: 100;
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 0.5s forwards; /* Fade-in animation */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  background-color: #262c32;
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  z-index: 100;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Fade-in animation for the drawer */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  
-  /* Category Input Field */
-  .category-input {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #ddd;
-    color: #262c32;
-    font-size: 16px;
-    transition: all 0.3s ease; /* Smooth transition for background and border color */
+}
+
+/* Input field for category */
+.category-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ddd;
+  color: #262c32;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.category-input:hover {
+  background-color: #e1e1e1;
+}
+
+.category-input:focus {
+  outline: none;
+  background-color: #f1f1f1;
+  border: 2px solid #3f4c5a;
+}
+
+/* Save and close buttons */
+.category-save-button,
+.category-close-button {
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.category-save-button {
+  background-color: #3f4c5a;
+  color: white;
+}
+
+.category-save-button:hover {
+  background-color: #4a5d67;
+  transform: scale(1.05);
+}
+
+.category-close-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.category-close-button:hover {
+  background-color: #ff2a2a;
+  transform: scale(1.05);
+}
+
+/* Extra hover effect for close button */
+.category-close-button {
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #e74c3c;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-close-button:hover {
+  transform: scale(1.1);
+  background-color: #c0392b;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive for tablet */
+@media screen and (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 items per row */
   }
-  
-  .category-input:hover {
-    background-color: #e1e1e1;
+
+  .category-button {
+    font-size: 12px;
+    padding: 8px;
   }
-  
-  .category-input:focus {
-    outline: none;
-    background-color: #f1f1f1;
-    border: 2px solid #3f4c5a;
+
+  .category-name {
+    font-size: 11px;
   }
-  
-  /* Shared styles for both Save and Close buttons */
-  .category-save-button, .category-close-button {
-    padding: 10px;
-    border-radius: 8px;
-    width: 100%;
-    margin-bottom: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover and scale */
+
+  .category-image,
+  .category-icon {
+    width: 20px;
+    height: 20px;
   }
-  
-  /* Save Button Specific Styles */
-  .category-save-button {
-    background-color: #3f4c5a;
-    color: white;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 480px) {
+  .categories-grid {
+    grid-template-columns: repeat(1, 1fr); /* Show 1 item per row */
   }
-  
-  .category-save-button:hover {
-    background-color: #4a5d67;
-    transform: scale(1.05); /* Slight zoom effect on hover */
+
+  .category-button {
+    font-size: 12px;
+    padding: 8px;
   }
-  
-  /* Close Button Specific Styles */
-  .category-close-button {
-    background-color: #ff4d4d;
-    color: white;
+
+  .category-name {
+    font-size: 10px; /* Adjust the text size */
   }
-  
-  .category-close-button:hover {
-    background-color: #ff2a2a;
-    transform: scale(1.05); /* Slight zoom effect on hover */
+
+  .category-image,
+  .category-icon {
+    width: 18px;
+    height: 18px; /* Smaller icons */
   }
-  
-  /* Category Open/Close Button Effects (similar to EditDeletePopup) */
-  .category-close-button {
-    padding: 10px;
-    border-radius: 50px;
-    background-color: #e74c3c;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .category-close-button:hover {
-    transform: scale(1.1); /* Slightly larger scale on hover */
-    background-color: #c0392b; /* Darker background color */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
-  }
-  
-  
+}

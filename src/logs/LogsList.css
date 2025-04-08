@@ -1,29 +1,35 @@
+/* logs-list.css */
+
+/* Container for logs */
 .logs-container {
-    background-color: #3f4c5a;
-    color: white;
+    background-color: #3f4c5a; /* Background color for the container */
+    color: white; /* Text color */
     border-radius: 10px;
     padding: 20px;
     width: 100%;
-    max-width: 500px;
-    height: 300px;
-    margin: 20px auto 0 auto;
+    max-width: 500px; /* Limits the width */
+    height: 300px; /* Fixed height */
+    margin: 20px auto; /* Centering the container */
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack contents vertically */
 }
 
+/* Header section inside the logs container */
 .logs-header {
     display: flex;
-    justify-content: space-between; /* This will space the title and subtitle */
+    justify-content: space-between; /* Title and subtitle should be spaced */
     align-items: center;
     margin-bottom: 15px;
 }
 
+/* Title of the logs container */
 .logs-title {
     font-size: 1rem;
     font-weight: bold;
 }
 
+/* Subtitle of the logs container */
 .logs-subtitle {
     font-size: 0.8rem;
     color: #bbb;
@@ -31,16 +37,17 @@
     margin-left: auto; /* Pushes subtitle to the right */
 }
 
+/* Area for scrolling logs */
 .logs-scroll-area {
     flex: 1;
-    overflow-y: auto;
-    padding-right: 10px;
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding-right: 10px; /* Adds space for scrollbar */
     scrollbar-width: thin;
-    scrollbar-color: #888 #262c32;
+    scrollbar-color: #888 #262c32; /* Custom scrollbar color */
     border-radius: 8px;
 }
 
-/* Instruction text styling */
+/* Styling for instruction text */
 .instruction-text {
     font-size: 1rem;
     color: #bbb;
@@ -48,11 +55,12 @@
     margin-bottom: 15px;
 }
 
-/* Grouped logs by date */
+/* Group of logs, each separated by date */
 .log-group {
     margin-bottom: 15px;
 }
 
+/* Date label for each group of logs */
 .log-date {
     font-size: 1rem;
     color: #bbb;
@@ -60,27 +68,31 @@
     margin-bottom: 5px;
 }
 
+/* Styling for individual log items */
 .log-item {
-    background-color: #262c32;
+    background-color: #262c32; /* Background color for each log */
     padding: 10px;
     border-radius: 8px;
-    margin: 5px 0;
+    margin: 5px 0; /* Space between items */
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+    justify-content: space-between; /* Align content to both sides */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Hover effect for log items */
 .log-item:hover {
-    background-color: #2a313a;
-    transform: scale(1.02);
+    background-color: #2a313a; /* Slight color change on hover */
+    transform: scale(1.02); /* Slightly enlarge the item */
 }
 
+/* Amount display in the log item */
 .log-amount {
-    color: #ddd;
+    color: #ddd; /* Light color for the amount */
     font-weight: bold;
 }
 
+/* Separator line between logs */
 .separator {
     height: 1px;
     background-color: white;
