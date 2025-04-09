@@ -1,0 +1,20 @@
+/* src/components/CalendarHeader.css */
+
+.calendar-header-bar {
+    background-color: #3c4b5e;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: white;
+    width: 95%; /* Added width to make it smaller */
+    max-width: 1500px; /* Added max-width to limit size */
+    margin-left: auto; /* Center the header */
+    margin-right: auto; /* Center the header */
+    height: 13%;
+}
+  
+.calendar-header-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
