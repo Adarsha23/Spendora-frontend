@@ -1,10 +1,9 @@
 import React from 'react'
-import Header from '../components/Header'
-import Charts from '../components/Charts'
-import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import ReportSection from '../components/ReportSection'
-import Summary from '../components/Summary'
+import Header from '../home/Header'
+import Charts from '../home/Charts'
+import Navbar from '../home/Navbar'
+import ReportSection from '../home/ReportSection'
+import Summary from '../home/Summary'
 import "./Home.css";
 export default function Home() {
   return (

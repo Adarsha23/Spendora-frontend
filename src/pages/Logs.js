@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar"; // Import Navbar component
+import Navbar from "../home/Navbar"; // Import Navbar component
 import LogsHeader from "../logs/LogsHeader"; // Import LogsHeader for title
 import LogsList from "../logs/LogsList"; // Import LogsList for displaying expense logs
 import Categories from "../logs/Categories"; // Import Categories for adding expenses
