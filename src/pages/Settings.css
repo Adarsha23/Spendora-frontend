@@ -1,0 +1,19 @@
+/* Settings.css */
+.settings-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #262c32;
+    color: white;
+  }
+  
+  .settings-card {
+    background-color: #3f4c5a;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
