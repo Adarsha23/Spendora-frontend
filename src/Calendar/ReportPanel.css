@@ -1,0 +1,75 @@
+/* src/components/ReportPanel.css */
+
+.report-panel-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* ✅ prevent scroll inside */
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.report-header h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.report-tab {
+  background-color: #2A3541;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.report-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto; /* optional if content is too much */
+}
+
+
+.report-section {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.report-label {
+  color: #B0B8C1;
+  font-size: 15px;
+}
+
+.report-value {
+  font-weight: 500;
+}
+
+.report-divider {
+  height: 1px;
+  background-color: #4F5D6B;
+  margin: 5px 0;
+}
+
+.report-date {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.report-subheader {
+  font-weight: 500;
+  margin-bottom: 5px;
+}

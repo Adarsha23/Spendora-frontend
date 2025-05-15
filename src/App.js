@@ -1,17 +1,25 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Import pages
 import Home from "./pages/Home";
 import Logs from "./pages/Logs";
-import Settings from "./pages/Settings"; // ✅ Import the Settings page
+import CalendarPage from "./pages/CalendarPage";
+import AnalyticsPage from "./pages/AnalyticsPage";
 
+// Main layout component for shared styles
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />          {/* Home Page */}
-        <Route path="/logs" element={<Logs />} />      {/* Logs Page */}
-        <Route path="/settings" element={<Settings />} /> {/* Settings Page */}
-      </Routes>
+      <div className="bg-gray-900 min-h-screen text-white">
+        {/* You can add a Navbar or Sidebar here if needed */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/logs" element={<Logs />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 };
