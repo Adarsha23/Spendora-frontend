@@ -6,7 +6,6 @@ import "./Settings.css";
 
 /**
  * Settings Page
- * Displays settings options in a 2x2 card layout with action buttons.
  */
 export default function Settings() {
   // Redirects to login.html in public folder
@@ -17,7 +16,7 @@ export default function Settings() {
 
   // Redirects to login.html after simulating delete
   const handleDelete = () => {
-    localStorage.clear(); // Optional: clear local/session storage
+    localStorage.clear(); // clear local/session storage
     // Simulate API call or deletion logic here
     window.location.href = "/login.html"; // Redirects to login page
   };
