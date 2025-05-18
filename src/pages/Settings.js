@@ -1,38 +1,64 @@
-// src/settings/Settings.js
 import React from "react";
-import Navbar from "../home/Navbar"; // Reusing existing navbar
-import Header from "../home/Header"; // Reusing Header component (you can customize it if needed)
-import "./Settings.css"; // Stylesheet for the settings page
+import { Link } from "react-router-dom";
+import Navbar from "../home/Navbar";
+import Header from "../home/Header";
+import "./Settings.css";
 
+/**
+ * Settings Page
+ * Displays settings options in a 2x2 card layout with action buttons.
+ */
 export default function Settings() {
+  // Redirects to login.html in public folder
+  const handleLogout = () => {
+    localStorage.clear(); // Optional: clear local/session storage
+    window.location.href = "/login.html"; // Redirects to login page
+  };
+
+  // Redirects to login.html after simulating delete
+  const handleDelete = () => {
+    localStorage.clear(); // Optional: clear local/session storage
+    // Simulate API call or deletion logic here
+    window.location.href = "/login.html"; // Redirects to login page
+  };
+
   return (
     <div className="app-container">
-      {/* Navbar is reused from the home page */}
       <Navbar />
-      
       <div className="main-content">
-        {/* Pass the title dynamically to the Header component */}
         <Header title="Settings" />
 
-        <div className="settings-layout">
-          {/* Settings sections as cards */}
-          <div className="settings-card">
-            <h3 className="settings-card-title">Profile Settings</h3>
-            <p className="settings-card-description">Edit your personal details</p>
-          </div>
+        <div className="settings-grid">
+          <Link to="/settings/terms" className="settings-card link-style">
+            <div className="icon-placeholder">📜</div>
+            <h3>Terms & Conditions</h3>
+          </Link>
 
-          <div className="settings-card">
-            <h3 className="settings-card-title">Security Settings</h3>
-            <p className="settings-card-description">Change your password and security settings</p>
-          </div>
+          <Link to="/settings/privacy" className="settings-card link-style">
+            <div className="icon-placeholder">🔐</div>
+            <h3>Privacy Policy</h3>
+          </Link>
 
-          <div className="settings-card">
-            <h3 className="settings-card-title">Preferences</h3>
-            <p className="settings-card-description">Set your application preferences</p>
-          </div>
+          <Link to="/settings/help" className="settings-card link-style">
+            <div className="icon-placeholder">❓</div>
+            <h3>Help</h3>
+          </Link>
+
+          <Link to="/settings/contact" className="settings-card link-style">
+            <div className="icon-placeholder">📞</div>
+            <h3>Contact Us</h3>
+          </Link>
+        </div>
+
+        <div className="settings-actions">
+          <button className="logout-btn" onClick={handleLogout}>
+            Log Out
+          </button>
+          <button className="delete-btn" onClick={handleDelete}>
+            Delete Account
+          </button>
         </div>
       </div>
     </div>
   );
 }
-

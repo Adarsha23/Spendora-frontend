@@ -11,6 +11,13 @@ html, body {
   height: 100%; /* Ensure full height for the body and html */
   width: 100%;  /* Ensure full width */
   overflow-x: hidden; /* Prevent horizontal scroll */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+/* Default light mode styles (will apply unless dark mode is enabled) */
+body {
+  background-color: #f0f0f0;
+  color: #333; /* Dark text for light mode */
 }
 
 .app-container {
@@ -20,6 +27,7 @@ html, body {
   width: 100%;  /* Ensure the container takes the full width of the screen */
 }
 
+/* Main content styling */
 .main-content {
   flex: 1;
   display: flex;
@@ -28,8 +36,58 @@ html, body {
   overflow-y: auto; /* Allows scrolling if content overflows vertically */
 }
 
+/* Content layout between components */
 .content-layout {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for body */
+  color: white; /* White text for dark mode */
+}
+
+/* Dark mode for app container */
+body.dark-mode .app-container {
+  background-color: #1e1e1e; /* Darker background for the app container */
+}
+
+/* Dark mode for cards */
+body.dark-mode .settings-card, body.dark-mode .summary-card, body.dark-mode .report-card {
+  background-color: #2c2c2c; /* Darker card background */
+  border: 1px solid white; /* White border around cards */
+  color: white; /* White text on cards */
+}
+
+/* Header in dark mode */
+body.dark-mode .header {
+  background-color: #1e1e1e; /* Dark header background */
+  color: white; /* White text in the header */
+}
+
+/* Dark mode for titles */
+body.dark-mode .overview-title {
+  color: white; /* White title text */
+}
+
+/* Dark mode toggle button styling */
+body.dark-mode .darkmode-toggle {
+  color: white; /* White text for toggle button */
+}
+
+body.dark-mode .darkmode-toggle .slider {
+  background-color: #2196F3; /* Blue color for checked state */
+}
+
+/* Styling the moon and sun icons */
+body.dark-mode .fa-sun {
+  color: yellow;
+  text-shadow: 0 0 5px yellow;
+}
+
+body.dark-mode .fa-moon {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
 }

@@ -1,0 +1,24 @@
+.info-content {
+    background-color: #3F4C5A;
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    margin-top: 20px;
+    line-height: 1.8;
+  }
+  
+  .info-content h3 {
+    margin-top: 20px;
+    color: #ffffff;
+  }
+  
+  .info-content p, .info-content li {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .info-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
