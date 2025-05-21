@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Import pages
 import Home from "./pages/Home";
 import Logs from "./pages/Logs";
 import CalendarPage from "./pages/CalendarPage";
@@ -25,6 +27,7 @@ const App = () => {
         <Route path="/settings/help" element={<Help />} />                 {/* Help */}
         <Route path="/settings/contact" element={<ContactUs />} />         {/* Contact Us */}
       </Routes>
+
     </BrowserRouter>
   );
 };

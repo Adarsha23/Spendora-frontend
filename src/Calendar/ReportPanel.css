@@ -1,3 +1,4 @@
+
 /* Container for the entire report panel */
 .report-panel-container {
     display: flex;
@@ -82,4 +83,4 @@
     font-weight: 500;
     margin-bottom: 5px;
   }
-  
+
