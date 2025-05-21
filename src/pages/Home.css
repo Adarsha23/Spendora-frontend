@@ -21,7 +21,7 @@ html, body {
 }
 
 .main-content {
-  flex: 1;
+  flex: 1; /*main container takes up space left by the navbar */
   display: flex;
   flex-direction: column;
   padding: 20px;

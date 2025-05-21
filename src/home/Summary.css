@@ -35,7 +35,7 @@
 }
 
 .summary-item:hover {
-    background-color: #2a313a; /* Darker hover effect */
+    background-color: #2a313a;
     transform: translateY(-3px);
 }
 

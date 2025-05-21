@@ -22,7 +22,7 @@ const expenseData = [
   { category: "Others", amount: 200, fill: "#E0E0E0" },
 ];
 
-// Custom Tooltip for Bar Chart
+// popup for Bar Chart
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (

@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom" //lets us navigate to different pages
 import "./Navbar.css"
 
 const Navbar = () => {
   const navigate = useNavigate()
-  const [isDropdownVisible, setDropdownVisible] = useState(false)
+  const [isDropdownVisible, setDropdownVisible] = useState(false) //controlling dropdown visibility
   const buttonRef = useRef(null)
-  const dropdownMenuRef = useRef(null)
+  const dropdownMenuRef = useRef(null) //close the dropdown if clicked outside
 
   const toggleDropdown = () => {
-    setDropdownVisible((prev) => !prev)
+    setDropdownVisible((prev) => !prev) 
   }
 
   // Close dropdown if clicked outside
@@ -38,6 +38,7 @@ const Navbar = () => {
         SPENDORA
       </div>
 
+{/*making the navbar functional */}
       <ul className="nav-items">
         <li onClick={() => navigate("/")}>
           <img src="/images/overview.png" alt="Overview" className="nav-icon" />
@@ -62,7 +63,7 @@ const Navbar = () => {
         <img src="/images/user.png" alt="User" />
         <span>Username</span>
 
-        {/* Ellipsis button toggles dropdown */}
+        {/* Ellipsis button handles dropdown */}
         <button onClick={toggleDropdown} className="ellipsis-btn" ref={buttonRef} aria-label="User menu">
           &#x22EE;
         </button>

@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Container holding everything */
+.calendar-page-container {
+  display: flex;
+  height: 150vh;
+  background-color: #262C32;
+  color: white;
+  overflow: hidden;
+}
+
+/* Sidebar/Navbar */
+.navbar {
+  width: 250px; /* Restored to original width */
+  background-color: #3F4C5A;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Main content on the right */
+.calendar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #262C32;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* CalendarHeader should have a fixed height */
+.calendar-header {
+  height: 60px; /* Restored to original height */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Main panel below header */
+.calendar-main-panel {
+  flex: 1;
+  display: flex;
+  padding: 0 20px 20px 20px;
+  gap: 16px;
+  overflow: hidden;
+  min-height: 0; /* Important for flex containers to respect parent height */
+}
+
+/* Calendar */
+.calendar {
+  flex: 2.5; /* Adjusted to match original proportions */
+  background-color: #3F4C5A;
+  border-radius: 16px;
+  padding: 20px; /* Restored original padding */
+  overflow: hidden; /* Changed from overflow-y: auto to prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Important for flex containers */
+}
+
+/* Report panel */
+.report-panel {
+  flex: 1.5; /* Adjusted to match original proportions */
+  background-color: #3F4C5A;
+  border-radius: 16px;
+  padding: 20px; /* Restored original padding */
+  overflow: hidden; /* Changed from overflow-y: auto to prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Important for flex containers */
+}
+
+/* Hide scrollbars but allow scrolling if absolutely necessary */
+.calendar::-webkit-scrollbar,
+.report-panel::-webkit-scrollbar {
+  width: 6px; /* Restored original width */
+  display: none; /* Hide scrollbar */
+}
+
+.calendar::-webkit-scrollbar-thumb,
+.report-panel::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.calendar::-webkit-scrollbar-thumb:hover,
+.report-panel::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

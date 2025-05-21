@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./EditDeletePopup.css"; // Import the CSS styles for popups
 
+//receives 4 props from the parent component
 const EditDeletePopup = ({ log, onClose, onEdit, onDelete }) => {
   const [editedAmount, setEditedAmount] = useState(log.amount.replace('$', '')); // Remove the "$" symbol to edit it as a number
 
   const handleSaveEdit = () => {
-    onEdit(log.id, editedAmount); // Pass log id and the new amount to the onEdit function
+    onEdit(log.id, editedAmount); // Pass log id and the new amount to the editedAmount function
     onClose(); // Close the popup after saving
   };
 

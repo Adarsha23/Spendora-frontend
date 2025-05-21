@@ -1,5 +1,5 @@
 import React from "react";
-import "./ChartContainer.css"; // Add any styling you need
+import "./ChartContainer.css";
 
 const ChartContainer = ({ children }) => {
   return (

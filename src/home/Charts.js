@@ -15,15 +15,15 @@ const barChartData = [
 
 // Data for Pie Chart (Expenses per category)
 const expenseData = [
-    { category: "Health", amount: 400, fill: "#4F4F4F" },       // Dark Gray
-    { category: "Education", amount: 600, fill: "#707070" },    // Medium Gray
-    { category: "Groceries", amount: 300, fill: "#A0A0A0" },    // Light Gray
-    { category: "Entertainment", amount: 500, fill: "#C0C0C0" }, // Lighter Gray
-    { category: "Others", amount: 200, fill: "#E0E0E0" },       // Very Light Gray
+    { category: "Health", amount: 400, fill: "#4F4F4F" },     
+    { category: "Education", amount: 600, fill: "#707070" },    
+    { category: "Groceries", amount: 300, fill: "#A0A0A0" },    
+    { category: "Entertainment", amount: 500, fill: "#C0C0C0" }, 
+    { category: "Others", amount: 200, fill: "#E0E0E0" },       
   ];
   
 
-// Custom Tooltip for Bar Chart
+// Custom Tooltip for Bar Chart (hover garda aune info)
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
@@ -51,8 +51,8 @@ const Charts = () => {
         <p className="card-subtitle">Trending up by 5.2% this month</p>
         <div className="bar-graph">
           <BarChart
-            width={500}
-            height={300}
+            width={600}
+            height={400}
             data={barChartData}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
           >
@@ -61,7 +61,7 @@ const Charts = () => {
             <YAxis tickLine={false} axisLine={false} tick={{ fill: "#ffffff" }} />
             <Tooltip content={<CustomTooltip />} />
             <Legend />
-            <Bar dataKey="savings" fill="#FFFFFF" radius={8} />
+            <Bar dataKey="savings" fill="#FFFFFF" radius={20} />
           </BarChart>
         </div>
       </div>
@@ -69,7 +69,7 @@ const Charts = () => {
       {/* Pie Chart Section */}
       <div className="card">
         <h3 className="card-title">Pie Chart - Expense Distribution</h3>
-        <p className="card-subtitle">January - June 2024</p>
+        <p className="card-subtitle">January - May 2025</p>
         <div className="pie-chart">
           <PieChart width={300} height={300}>
             <Tooltip cursor={false} />
@@ -88,7 +88,6 @@ const Charts = () => {
           <div className="footer-text">
             Trending up by 5.2% this month <TrendingUp className="icon" />
           </div>
-          <p className="muted-text">Showing total expenses for the last 6 months</p>
         </div>
       </div>
 

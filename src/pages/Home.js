@@ -4,7 +4,7 @@ import Charts from '../home/Charts'; // Bar chart and pie chart section
 import Navbar from '../home/Navbar'; // Left navigation sidebar
 import ReportSection from '../home/ReportSection'; // Report, Pie Chart, Budget
 import Summary from '../home/Summary'; // Summary component
-import "./Home.css"; // Styles specific to Home page
+import "./Home.css";
 
 /**
  * Home Component
