@@ -4,13 +4,20 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /*makes sure padding and border dont add to the total*/
 }
 
 html, body {
   height: 100%; /* Ensure full height for the body and html */
   width: 100%;  /* Ensure full width */
   overflow-x: hidden; /* Prevent horizontal scroll */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+/* Default styles  */
+body {
+  background-color: #f0f0f0;
+  color: #333; 
 }
 
 .app-container {
@@ -20,6 +27,7 @@ html, body {
   width: 100%;  /* Ensure the container takes the full width of the screen */
 }
 
+/* Main content styling */
 .main-content {
   flex: 1;
   display: flex;
@@ -28,6 +36,7 @@ html, body {
   overflow-y: auto; /* Allows scrolling if content overflows vertically */
 }
 
+/* Content layout between components */
 .content-layout {
   display: flex;
   justify-content: space-between;

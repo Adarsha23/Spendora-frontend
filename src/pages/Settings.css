@@ -1,19 +1,82 @@
-/* Settings.css */
-.settings-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    background-color: #262c32;
-    color: white;
-  }
-  
-  .settings-card {
-    background-color: #3f4c5a;
-    border-radius: 10px;
-    padding: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
+/* Grid layout for the main cards */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+/* Reset default link styles */
+.link-style {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-style:hover {
+  color: inherit;
+}
+
+/* Individual card */
+.settings-card {
+  background-color: #3F4C5A;
+  border-radius: 12px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.settings-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon-placeholder {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+/* Action buttons (logout & delete) */
+.settings-actions {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logout-btn,
+.delete-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Logout button */
+.logout-btn {
+  background-color: #3f4c5a;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #4a5d67;
+  transform: scale(1.02);
+}
+
+/* Delete account button */
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.02);
+}

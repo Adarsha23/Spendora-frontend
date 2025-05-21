@@ -1,29 +1,18 @@
 import React, { useState, useEffect, useRef } from "react"
-import { useNavigate } from "react-router-dom" // 👈 this is the magic hook
+import { useNavigate } from "react-router-dom" //lets us navigate to different pages
 import "./Navbar.css"
 
 const Navbar = () => {
-  const navigate = useNavigate() // 👈 makes routing possible with a button click
-  const [isDropdownVisible, setDropdownVisible] = useState(false)
+  const navigate = useNavigate()
+  const [isDropdownVisible, setDropdownVisible] = useState(false) //controlling dropdown visibility
   const buttonRef = useRef(null)
-  const dropdownMenuRef = useRef(null)
+  const dropdownMenuRef = useRef(null) //close the dropdown if clicked outside
 
   const toggleDropdown = () => {
-    setDropdownVisible((prev) => !prev)
+    setDropdownVisible((prev) => !prev) 
   }
 
-  useEffect(() => {
-    if (isDropdownVisible && buttonRef.current && dropdownMenuRef.current) {
-      const buttonRect = buttonRef.current.getBoundingClientRect()
-      const dropdown = dropdownMenuRef.current
-      dropdown.style.top = `${buttonRect.top - dropdown.offsetHeight - 5}px`
-      dropdown.style.left = `${buttonRect.left}px`
-      dropdown.style.display = "block"
-    } else if (dropdownMenuRef.current) {
-      dropdownMenuRef.current.style.display = "none"
-    }
-  }, [isDropdownVisible])
-
+  // Close dropdown if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -44,11 +33,12 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="logo" onClick={() => navigate("/")}> {/* Navigate to Home */}
+      <div className="logo" onClick={() => navigate("/")}>
         <img src="/images/Logo1.png" alt="SPENDORA Logo" className="logo-img" />
         SPENDORA
       </div>
 
+{/*making the navbar functional */}
       <ul className="nav-items">
         <li onClick={() => navigate("/")}>
           <img src="/images/overview.png" alt="Overview" className="nav-icon" />
@@ -68,39 +58,34 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="divider"></div>
-
-      <div className="get-help" onClick={() => alert("Need help?")}>
-        Get Help
-      </div>
-
+      {/* User profile & dropdown at the bottom */}
       <div className="user-profile">
         <img src="/images/user.png" alt="User" />
         <span>Username</span>
 
-        <button onClick={toggleDropdown} className="ellipsis-btn" ref={buttonRef}>
+        {/* Ellipsis button handles dropdown */}
+        <button onClick={toggleDropdown} className="ellipsis-btn" ref={buttonRef} aria-label="User menu">
           &#x22EE;
         </button>
 
-        <div className="dropdown-menu" ref={dropdownMenuRef}>
-          <ul>
-            <li>
-              <button className="dropdown-item" onClick={() => navigate("/profile")}>
-                User Profile
-              </button>
-            </li>
-            <li>
-              <button className="dropdown-item" onClick={() => navigate("/settings")}>
-                Settings
-              </button>
-            </li>
-            <li>
-              <button className="dropdown-item" onClick={() => alert("Logged out!")}>
-                Logout
-              </button>
-            </li>
-          </ul>
-        </div>
+        {/* Dropdown menu */}
+        {isDropdownVisible && (
+          <div className="dropdown-menu" ref={dropdownMenuRef}>
+            <ul>
+              <li>
+                <button
+                  className="dropdown-item"
+                  onClick={() => {
+                    navigate("/settings")
+                    setDropdownVisible(false) // close dropdown on click
+                  }}
+                >
+                  Settings
+                </button>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   )

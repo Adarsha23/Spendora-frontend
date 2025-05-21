@@ -26,11 +26,13 @@ const categories = [
   { name: "Part-Time", image: <img src="/images/part-time.png" alt="Part-Time" className="category-icon" /> },
 ];
 
+// receives a prop addExpense  to actually log the new expense entry.
 const Categories = ({ addExpense }) => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [expenseAmount, setExpenseAmount] = useState("");
-  const [showDrawer, setShowDrawer] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null); //select the current category name
+  const [expenseAmount, setExpenseAmount] = useState(""); //select the amount
+  const [showDrawer, setShowDrawer] = useState(false); //visibility of popup
 
+  //calls the add Expense function from the parent component with the selected category and amount
   const handleSaveExpense = () => {
     if (expenseAmount && selectedCategory) {
       addExpense(selectedCategory, expenseAmount); // Pass new expense to parent
@@ -71,6 +73,10 @@ const Categories = ({ addExpense }) => {
             value={expenseAmount}
             onChange={(e) => setExpenseAmount(e.target.value)}
             className="category-input"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") handleSaveExpense();
+            }}
+            
           />
           <button className="category-save-button" onClick={handleSaveExpense}>
             Save

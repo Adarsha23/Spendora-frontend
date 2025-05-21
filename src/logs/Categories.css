@@ -20,12 +20,6 @@
   color: white;
 }
 
-/* Scrollable area for the categories */
-.categories-scroll-area {
-  overflow-y: auto;
-  flex: 1;
-  margin-bottom: 15px;
-}
 
 /* Grid layout for categories */
 .categories-grid {
